@@ -6,4 +6,4 @@ ls -la /var/nfs-test
 
 touch /var/nfs-test/test
 
-pause
+ while true; do sleep 10; done
