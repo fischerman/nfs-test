@@ -11,8 +11,9 @@ RUN addgroup no-root && \
 
 RUN mkdir /var/nfs-test
 
+ADD nfs-test.sh /
+RUN chmod +x /nfs-test.sh
+
 USER no-root
 VOLUME ["/var/nfs-test"]
-ADD nfs-test.sh /
-RUN chmod u+x /nfs-test.sh
 ENTRYPOINT ["/nfs-test.sh"]
